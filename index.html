@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MovieFlix - Discover Movies</title>
+  <link rel="stylesheet" href="movie.css">
+</head>
+<body>
+  <div class="header">
+    <div class="container">
+      <h1>🎬 MovieFlix</h1>
+      <p class="subtitle">Discover movies, explore details, find your next favorite film</p>
+      
+      <div class="search-box">
+        <input type="text" id="search-input" placeholder="Search for movies...">
+        <button id="search-btn">Search</button>
+      </div>
+
+      <div class="categories">
+        <button class="category-btn" data-query="action">Action</button>
+        <button class="category-btn" data-query="comedy">Comedy</button>
+        <button class="category-btn" data-query="drama">Drama</button>
+        <button class="category-btn" data-query="horror">Horror</button>
+        <button class="category-btn" data-query="romance">Romance</button>
+        <button class="category-btn" data-query="sci-fi">Sci-Fi</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div id="loading" class="hidden">
+      <div class="spinner"></div>
+      <p>Loading movies...</p>
+    </div>
+
+    <div id="error" class="hidden"></div>
+
+    <div id="results-info" class="hidden"></div>
+
+    <div id="no-results" class="no-results hidden">
+      <div class="no-results-icon">🎭</div>
+      <div class="no-results-text">No movies found</div>
+      <p>Try searching for something else</p>
+    </div>
+
+    <div id="movies-grid" class="movies-grid"></div>
+  </div>
+
+  <div id="modal" class="modal">
+    <div class="modal-content">
+      <span class="close-btn">&times;</span>
+      <div id="modal-body"></div>
+    </div>
+  </div>
+
+  <script src="movie.js"> </script>
+</body>
+</html>
